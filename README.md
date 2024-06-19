@@ -4,7 +4,11 @@ This is a guide to changing the Kenwood TS-480 display illumination from orange/
 
 ![Kenwood TS 480 blue display panel](images/Kenwood_TS480_blue_display_panel.png)
 
-Youtube video https://youtube.com/?ssssss
+Youtube video https://youtu.be/J3dYbJLnj48?si=8bQZr7x67Q2II6Cg
+
+## Copyright
+
+Text and images are provided under the GNU free documentation license.
 
 ## Disclaimer
 
