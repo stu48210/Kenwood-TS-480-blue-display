@@ -4,10 +4,22 @@ This is a guide to changing the Kenwood TS-480 display illumination from orange/
 
 ![alt text](images/Kenwood_TS480_blue_display_panel.png)
 
+Youtube video https://youtube.com/?ssssss
+
+## Disclaimer
+
+I take no responsibility for any damage or loss caused by following these instructions. They are provided **as-is** on a **best effort** basis and may contain **errors or omissions** I am unaware of.
+
+If you are not experienced in fine surface mount soldering I absolutely recommend not to proceed and contact a reputable technician / engineer to have the modification done.
+
+Please also note that I will not carry out this modification for you. I have a full time job and the last thing I want to do is more work after hours. Hope you understand!
+
 ## Required parts
 
-- 8 x LTST-S110TBKT Blue LED (datasheet here: )
-- ? x 0805 blue LED
+- 8 x LTST-S110TBKT side blue LED (datasheet here: )
+- 20 x 0805 blue LED
+- 3 x 0805 100ohm resistors
+- 1 x 0805 330ohm resistor
 
 ## Disassemble the display unit
 
@@ -26,15 +38,13 @@ Follow the process below
 11. Using Allen key, loosen and remove VFO knob from the encoder shaft
 12. Undo the nut holding VFO encoder, unplug CN5 which attaches encoder wiring to PCB and remove encoder
 
-## Overview of modification
+## LCD display illumination replacement
 
-## LCD display illumination
-
-The TS-480 uses 8 surface mount LED to illuminate the LCD display with a yellowish colour.
+The TS-480 uses 8 surface mount LED to illuminate the LCD display with a yellowish color.
 
 The original yellow LED require around 1.4v to light however the replacement blue LED require around 3v.
 
-This modification therefore requires not only a replacement of the LED but also some track and resistor changes since 4 blue LED in series will not work on the supplied voltage.
+This modification therefore requires not only a replacement of the LED but also some track cutting, jumper (bodge) wires and resistor changes since 4 blue LED in series will not light on the supplied voltage.
 
 Please see the diagram showing the LCD illumination circuit below:
 
@@ -100,18 +110,26 @@ Replace R12 56ohm with 100ohm (0805) as per diagram below:
 
 Reattach the LCD assembly to the PCB taking care to align it correctly. Bend the lugs to secure it to the PCB as it was before removal.
 
-**This completes the LCD illumination.**
+### Test the LCD illumination
 
-## Keyboard illumination
+At this point you can test to confirm all is good before moving onto the keyboard part. Hopefully you have a result like here:
 
-The rubber keyboard is illuminated by a number of surface mount LED placed around the PCB. The LED are in strings of 2 to 4 with different resistors to maintain a consistent brightness level of the keyboard. The supply is the same 8m (9.45v) line that the LCD LED are powered from.
+![Testing the LCD illumination](images/testing_LCD.jpg)
 
-To change to the blue LED a couple of modifications must be made similar to the LCD display as the blue LED require a higher voltage.
+## Keyboard illumination replacement
 
-- Replace D19 (near AT key) with 100ohm resistor
-- Replace D28 (between FINE and SCAN) with 100ohm resistor
-- Replace R35 180ohm with 330ohm (0805) (in radio rally bag)
-- Change LED string D20 – D23 from series to parallel:
+The rubber keyboard is illuminated by a number of surface mount LED placed around the PCB. The keyboard LED's are in strings of 2 to 4 with different resistors to maintain a consistent brightness level of the keyboard. The supply is the same 8m (9.45v) line that the LCD LED are powered from.
+
+To change to the blue LED a couple of modifications must be made similar to the LCD display as the blue LED require a higher voltage. Also two LED are replaced by resistors.
+
+- Replace D31, D32, D33, D34, D35 and D36 with blue LED
+- Replace D24, D25 and D26 with blue LED
+- Replace LED D18, D17 and D16 with blue LED
+- Replace LED D19 (near AT key) with 100ohm resistor
+- Replace LED D27, D29 and D30 with blue LED
+- Replace LED D28 (between FINE and SCAN) with a 100ohm resistor
+- Replace R35 180ohm with 330ohm (0805)
+- Replace LED D20, D21, D22 and D23 with blue LED
 - Cut trace between D20 and D21 on rear of PCB
 - Cut trace between D22 and D23 on rear of PCB
 - Jumper wire between cathode of D21 and anode of D23 on rear of PCB
@@ -120,11 +138,11 @@ To change to the blue LED a couple of modifications must be made similar to the 
 
 Photo of LED string D20 – D23 modifications on rear of PCB:
 
-[[Image:Image9.png|top]]
+![alt text](images/keypad_jumper_wires1.jpg)
 
-## Change RX LED
+## Change the RX LED to blue
 
-You can change the RX LED to blue by swapping D15 to the same LED as used in the LCD area. To reduce the brightness swap R25 from 220ohm to 750ohm or 1k.
+Optionally, you can change the RX LED from green to blue by swapping D15 to the same LED as used in the LCD area. To reduce the brightness swap R25 from 220ohm to 750ohm or 1k.
 
 Last updated 2024-06-16
 
