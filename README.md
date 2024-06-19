@@ -22,7 +22,7 @@ Please also note that I will not carry out this modification for you. I have a f
 
 - 8 x LTST-S110TBKT side blue LED : [datasheet](datasheets/LTST-S110TBKT-BLUE_LED_480.pdf)
 - 19 x KP-2012QBC-D 0805 blue LED : [datasheet](datasheets/KP-2012QBC-D_0805_BLUE_LED-rs-components.pdf)
-- 3 x 0805 100ohm resistors
+- 5 x 0805 100ohm resistors
 - 1 x 0805 330ohm resistor
 
 ## Disassemble the display unit
